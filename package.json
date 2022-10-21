@@ -1,0 +1,31 @@
+{
+  "name": "qz-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "qz-cli": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzq19905597/qz-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qzq19905597/qz-cli/issues"
+  },
+  "homepage": "https://github.com/qzq19905597/qz-cli#readme",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "commander": "^9.4.1",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^9.1.4",
+    "log-symbols": "^5.1.0",
+    "ora": "^6.1.2"
+  }
+}
