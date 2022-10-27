@@ -2,13 +2,13 @@
   "name": "qz-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
-    "qz-cli": "index.js",
-    "eslint": "eslint src --ext .vue,.ts"
+    "qz-cli": "src/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src --ext .vue,.ts"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/qzq19905597/qz-cli#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
     "chalk": "^5.1.2",
     "commander": "^9.4.1",
     "download-git-repo": "^3.0.2",
