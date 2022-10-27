@@ -31,15 +31,15 @@ program.command('init <name>').description('init a project').option('-t, --type 
   // @ts-ignore
   inquirer.prompt(question).then((answers) => {
     console.log(answers) // 返回的结果
-    spinner.start();
-    download('direct:https://github.com/qzq19905597/react-redux-ts-redux-tookit.git', `./${name}`, { clone: true }, (err)=>{
-      if(err){
-        spinner.fail()
-        console.log(err);
-        return
-      }
-      spinner.succeed()
-    })
+    // spinner.start();
+    // download('direct:https://github.com/qzq19905597/react-redux-ts-redux-tookit.git', `./${name}`, { clone: true }, (err)=>{
+    //   if(err){
+    //     spinner.fail()
+    //     console.log(err);
+    //     return
+    //   }
+    //   spinner.succeed()
+    // })
   })
 })
 program.parse(process.argv)
