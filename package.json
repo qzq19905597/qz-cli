@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "lint-staged",
-    "eslint": "eslint src --ext .vue,.ts"
+    "eslint": "eslint src --ext .vue,.ts",
+    "ts-check": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,11 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run ts-compile-check && npm run lint-staged"
+    }
   },
   "commitlint": {
     "extends": [
