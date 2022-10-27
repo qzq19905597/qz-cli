@@ -9,7 +9,8 @@
   "scripts": {
     "test": "lint-staged",
     "eslint": "eslint src --ext .vue,.ts",
-    "ts-check": "tsc -p tsconfig.json"
+    "ts-check": "tsc -p tsconfig.json",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
