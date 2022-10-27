@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+import { modyTypes } from "./constants";
+
 const inquirer = require('inquirer');
 const { program } = require('commander')
 const download = require('download-git-repo')
@@ -24,8 +27,8 @@ program.command('init <name>').description('init a project').option('-t, --type 
       name: 'type',
       type: 'list',
       message: '请输入项目模板',
-      choices: ['react', 'vue'],
-      default: 'react'
+      choices: [modyTypes.react, modyTypes.vue],
+      default: modyTypes.react
     }
   ]
   // @ts-ignore
