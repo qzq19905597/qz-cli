@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import { modyTypes } from "./constants";
+import { modyTypes } from "./constants/index.mjs";
 
-const inquirer = require('inquirer');
-const { program } = require('commander')
-const download = require('download-git-repo')
-const ora = require('ora')
+import inquirer  from 'inquirer';
+import { program } from 'commander';
+import download from 'download-git-repo'
+import ora from 'ora'
 
 //设置版本
 program.version('1.0.0')
@@ -31,18 +31,17 @@ program.command('init <name>').description('init a project').option('-t, --type 
       default: modyTypes.react
     }
   ]
-  // @ts-ignore
   inquirer.prompt(question).then((answers) => {
     console.log(answers) // 返回的结果
-    // spinner.start();
-    // download('direct:https://github.com/qzq19905597/react-redux-ts-redux-tookit.git', `./${name}`, { clone: true }, (err)=>{
-    //   if(err){
-    //     spinner.fail()
-    //     console.log(err);
-    //     return
-    //   }
-    //   spinner.succeed()
-    // })
+    spinner.start();
+    download('direct:https://github.com/qzq19905597/react-redux-ts-redux-tookit.git#main', `./${name}`, { clone: true }, (err)=>{
+      if(err){
+        spinner.fail()
+        console.log(err);
+        return
+      }
+      spinner.succeed('下载完成')
+    })
   })
 })
 program.parse(process.argv)
